@@ -9,8 +9,14 @@ function Grid(props) {
   const numRows = props.solution.length;
   const numCols = props.solution[0].length;
 
-  const initialGrid = Array(numRows).fill(Array(numCols).fill(false));
+  const initialGrid = generateInitialGrid(numRows, numCols);
   const [grid, setGrid] = useState(initialGrid);
+
+  function toggleCell(row, col) {
+    const curState = grid[row][col];
+    grid[row][col] = !curState;
+    setGrid([...grid]);
+  }
 
   const colIndicators = [];
   for (let i = 0; i < numCols; i++) {
@@ -83,6 +89,9 @@ function Grid(props) {
       } else {
         row.push(<Cell
           key={j}
+          filled={grid[i][colIdx]}
+          clickable={true}
+          onClick={() => toggleCell(i, colIdx)}
         />);
       }
     }
@@ -103,6 +112,23 @@ function Grid(props) {
       </table>
     </div>
   );
+}
+
+function generateInitialGrid(rows, cols) {
+  const result = [];
+
+  // Can't use Array.prototype.fill twice since it will generate references to the same array...
+  for (let i = 0; i < rows; i++) {
+    const row = [];
+
+    for (let j = 0; j < cols; j++) {
+      row.push(false);
+    }
+
+    result.push(row);
+  }
+
+  return result;
 }
 
 function indicator(cells) {
