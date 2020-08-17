@@ -1,0 +1,16 @@
+.Cell {
+  border-bottom: 1px solid #aaaaaa;
+  border-right: 1px solid #aaaaaa;
+  display: inline-block;
+  height: 14px;
+  vertical-align: middle;
+  width: 14px;
+}
+
+.FirstRow {
+  border-top: 1px solid #aaaaaa;;
+}
+
+.FirstCol {
+  border-left: 1px solid #aaaaaa;
+}

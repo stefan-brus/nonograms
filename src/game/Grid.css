@@ -1,0 +1,8 @@
+.Grid table {
+  border-collapse: collapse;
+  cursor: pointer;
+}
+
+.Row {
+  line-height: 0;
+}
