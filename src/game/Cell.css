@@ -1,16 +1,28 @@
 .Cell {
   border-bottom: 1px solid #aaaaaa;
   border-right: 1px solid #aaaaaa;
-  display: inline-block;
-  height: 14px;
-  vertical-align: middle;
-  width: 14px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  width: 16px;
+}
+
+.Borderless {
+  border-bottom: 1px solid transparent;
+  border-right: 1px solid transparent;
 }
 
 .FirstRow {
-  border-top: 1px solid #aaaaaa;;
+  border-bottom: 1px solid #aaaaaa;
 }
 
 .FirstCol {
-  border-left: 1px solid #aaaaaa;
+  border-right: 1px solid #aaaaaa;
+}
+
+.Indicator {
+  font-family: monospace;
+  font-size: 13px;
+  text-align: center;
+  vertical-align: middle;
 }
