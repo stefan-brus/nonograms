@@ -31,9 +31,9 @@ function Grid(props) {
 
     for (let j = 0; j < longestRowIndicator + numCols; j++) {
       const colIdx = j  - longestRowIndicator;
-      const indicatorIdx = longestColIndicator - i - 1;
       const paddingColumn = colIdx < 0;
-      const hasIndicatorOnRow = !paddingColumn && colIndicators[colIdx].length >= indicatorIdx;
+      const indicatorIdx = paddingColumn ? null : i - (longestColIndicator - colIndicators[colIdx].length);
+      const hasIndicatorOnRow = !paddingColumn && colIndicators[colIdx].length > indicatorIdx;
       const hasGridBorder = !paddingColumn && i === longestColIndicator - 1;
 
       if (hasIndicatorOnRow) {
@@ -62,9 +62,9 @@ function Grid(props) {
 
     for (let j = 0; j < longestRowIndicator + numCols; j++) {
       const colIdx = j - longestRowIndicator;
-      const indicatorIdx = longestRowIndicator - j - 1;
       const indicatorCol = colIdx < 0;
-      const hasIndicator = indicatorCol && rowIndicators[i].length >= indicatorIdx;
+      const indicatorIdx = indicatorCol ? j - (longestRowIndicator - rowIndicators[i].length) : null;
+      const hasIndicator = indicatorCol && rowIndicators[i].length > indicatorIdx;
       const hasGridBorder = indicatorCol && j === longestRowIndicator - 1;
 
       if (hasIndicator) {

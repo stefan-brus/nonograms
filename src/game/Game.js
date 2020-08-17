@@ -6,7 +6,7 @@ function Game() {
 
   // TODO: Generate random nonograms
   const solution = [
-    [true , false, false, false, false, false, false, false, false, false, false, false, false, false, true ],
+    [true , true , false, true , true , true , false, false, false, false, false, false, false, false, true ],
     [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
     [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
     [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
@@ -19,8 +19,8 @@ function Game() {
     [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
     [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
     [false, false, false, false, false, false, false, false, false, false, false, false, false, true , false],
-    [false, false, false, false, false, false, false, false, false, false, false, false, false, true , true ],
-    [false, false, false, false, false, false, false, false, false, false, false, false, false, true , true ],
+    [false, false, false, true , false, false, false, false, false, false, false, false, false, true , true ],
+    [false, false, false, true , false, false, false, false, false, false, false, false, false, true , true ],
   ];
 
   return (

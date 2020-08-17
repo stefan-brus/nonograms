@@ -12,6 +12,10 @@
   border-right: 1px solid transparent;
 }
 
+.Filled {
+  background-color: #000000;
+}
+
 .FirstRow {
   border-bottom: 1px solid #aaaaaa;
 }
